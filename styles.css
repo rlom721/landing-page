@@ -1,33 +1,41 @@
+/* Color Palette Used:
+    navy #313866
+    purple #504099
+    magenta #974EC3
+    pink #FE7BE5
+*/
+
+/* --- CSS Reset --- */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     flex-direction: column;
-    margin: 0;
-    /* min-height: 100vh; */
 }
 
 .header,
 .footer {
     background: #313866;
     color: #FE7BE5;
-    height: 64px;
-    padding: 0 150px;
+    padding: 24px 192px;
     display: flex;
     align-items: center;
 }
 
+/* --- Header Section --- */
+
 .header {
     justify-content: space-between;
-}
-
-.footer {
-    justify-content: center;
-}
-
-.content {
-    display: flex;
-    flex-direction: column;
-    /* flex: 1; */
+    align-items: baseline;
 }
 
 .logo {
@@ -40,11 +48,37 @@ body {
     gap: 24px;
 }
 
-.highlight {
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #FE7BE5;
+    font-size: 16px;
+}
+
+/* --- Footer Section --- */
+
+.footer {
+    justify-content: center;
+}
+
+/* --- Content Sections Below --- */
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Hero Section  --- */
+
+.hero {
     background: #313866;
-    padding: 64px 150px;
+    padding: 64px 192px;
     color: #eee;
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 16px;
 }
@@ -55,13 +89,14 @@ body {
 
 .left h1 {
     font-size: 36px;
+    margin-bottom: 12px;
 }
 
 .left button {
     background: #974EC3;
     color: #eee;
     font-weight: bold;
-    /* border: 1px solid #974EC3; */
+    margin-top: 12px;
     border-radius: 8px;
     padding: 8px 24px;
 }
@@ -69,24 +104,25 @@ body {
 .img {
     background: #8a8a8a;
     width: 300px;
-    min-height: 200px;
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex: 1;
 }
 
+/* --- Information Section --- */
+
 .information {
     display: flex;
     flex-direction: column;
-    /* flex: 1; */
     margin-bottom: 48px;
-    padding: 32px 150px;
+    padding: 48px 192px;
     gap: 32px;
 }
 
 .information .title {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 700;
     text-align: center;
 }
@@ -95,12 +131,15 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 48px;
+    gap: 32px;
 }
 
 .info {
     max-width: 100px;
     text-align: center;
+    flex: 1;
+    font-size: 14px;
+    color: #5b5b5b;
 }
 
 .info-img {
@@ -110,10 +149,12 @@ body {
     border-radius: 12px;
 }
 
+/* --- Quote Section --- */
+
 .quote {
     background: #504099;
     color: #FE7BE5;
-    padding: 64px;
+    padding: 64px 192px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -130,29 +171,22 @@ body {
     text-align: end;
 }
 
+
+/* --- Sign Up Section --- */
+
 .sign-up {
     background: #974EC3;
     color: #eee;
-    max-height: 128px;
-    /* max-width: 800px; */
-    border: 3px solid #974EC3;
+    width: 600px;
     border-radius: 8px;
-    margin: 64px 150px;
-    padding: 8px 128px;
+    margin: 48px 192px;
+    padding: 36px 64px;
     display: flex;
+    align-self: center;
     justify-content: space-between;
     align-items: center;
-    /* gap: 12px; */
-}
-
-.sign-up .text {
-    flex: 2;
-}
-
-.sign-up .right {
-    flex: 1;
-    display: flex;
-    justify-content: end;
+    flex-shrink: 0;
+    gap: 16px;
 }
 
 .sign-up button {
@@ -160,33 +194,10 @@ body {
     color: #eee;
     border: 3px solid #FE7BE5;
     border-radius: 8px;
-    padding: 8px 24px;
-}
-
-.sign-up h4 {
-    font-size: 24px;
-    margin-bottom: 0;
+    padding: 6px 24px;
+    flex-shrink: 0;
 }
 
 .sign-up p {
-    margin-top: 8px;
+    font-size: 12px;
 }
-
-a {
-    text-decoration: none;
-    color: #FE7BE5;
-    font-size: 20px;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-/* 
-navy #313866
-purple #504099
-magenta #974EC3
-pink #FE7BE5
-*/
