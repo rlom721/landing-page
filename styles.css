@@ -1,4 +1,4 @@
-/* Color Palette Used:
+/* Color Palette:
     navy #313866
     purple #504099
     magenta #974EC3
@@ -16,36 +16,54 @@
     padding: 0;
 }
 
+/* --- General Document Settings --- */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
-.header,
-.footer {
+/* --- Header & Footer Section --- */
+
+#header,
+#footer {
     background: #313866;
     color: #FE7BE5;
-    padding: 24px 192px;
+    padding: 16px 192px;
     display: flex;
+    justify-content: center;
     align-items: center;
+    white-space: nowrap;
+
 }
 
-/* --- Header Section --- */
+/* --- Navbar Section --- */
 
-.header {
+/* navbar div within header keeps items centered while zooming */
+#navbar {
+    flex: 1;
+    display: flex;
     justify-content: space-between;
     align-items: baseline;
+    gap: 24px;
 }
 
 .logo {
     font-size: 24px;
     font-weight: 800;
+    flex: 1;
+
+    /* flex-shrink: 0; */
 }
 
 .links {
     display: flex;
     gap: 24px;
+    flex: 1;
+    /* flex-shrink: 0; */
+
 }
 
 ul {
@@ -60,15 +78,25 @@ a {
 
 /* --- Footer Section --- */
 
-.footer {
-    justify-content: center;
+#footer {
+    padding: 36px 192px;
 }
 
 /* --- Content Sections Below --- */
 
-.content {
+#content {
     display: flex;
     flex-direction: column;
+    /* setting flex grows items proportionally w/ zoom out 
+       also makes footer stick to page bottom */
+    flex: 1;
+}
+
+.hero,
+.information,
+.quote,
+.sign-up {
+    flex: 1;
 }
 
 /* --- Hero Section  --- */
@@ -80,11 +108,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 16px;
-}
-
-.left {
-    flex: 1;
+    gap: 24px;
 }
 
 .left h1 {
@@ -108,13 +132,15 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 1;
+    flex-shrink: 1;
 }
 
 /* --- Information Section --- */
 
 .information {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     margin-bottom: 48px;
     padding: 48px 192px;
@@ -124,7 +150,6 @@ a {
 .information .title {
     font-size: 28px;
     font-weight: 700;
-    text-align: center;
 }
 
 .info-cards {
@@ -177,16 +202,17 @@ a {
 .sign-up {
     background: #974EC3;
     color: #eee;
-    width: 600px;
     border-radius: 8px;
     margin: 48px 192px;
     padding: 36px 64px;
-    display: flex;
+    max-height: 128px;
+    /* width: 400px; */
+    /* align-self keeps box from growing */
     align-self: center;
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-shrink: 0;
-    gap: 16px;
+    gap: 36px;
 }
 
 .sign-up button {
@@ -195,6 +221,12 @@ a {
     border: 3px solid #FE7BE5;
     border-radius: 8px;
     padding: 6px 24px;
+    align-self: center;
+    justify-self: center;
+}
+
+.sign-up .left {
+    width: 200px;
     flex-shrink: 0;
 }
 
