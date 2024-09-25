@@ -20,23 +20,21 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
 }
 
 /* --- Header & Footer Section --- */
 
-#header,
-#footer {
+header,
+footer {
     background: #313866;
     color: #FE7BE5;
     padding: 16px 192px;
     display: flex;
     justify-content: center;
     align-items: center;
-    white-space: nowrap;
-
 }
 
 /* --- Navbar Section --- */
@@ -54,23 +52,20 @@ body {
     font-size: 24px;
     font-weight: 800;
     flex: 1;
-
-    /* flex-shrink: 0; */
 }
 
 .links {
-    display: flex;
-    gap: 24px;
     flex: 1;
-    /* flex-shrink: 0; */
-
+    display: flex;
+    justify-content: end;
+    gap: 24px;
 }
 
-ul {
+#navbar ul {
     list-style-type: none;
 }
 
-a {
+#navbar a {
     text-decoration: none;
     color: #FE7BE5;
     font-size: 16px;
@@ -78,25 +73,25 @@ a {
 
 /* --- Footer Section --- */
 
-#footer {
+footer {
+    white-space: nowrap;
     padding: 36px 192px;
 }
 
 /* --- Content Sections Below --- */
 
 #content {
-    display: flex;
-    flex-direction: column;
     /* setting flex grows items proportionally w/ zoom out 
        also makes footer stick to page bottom */
     flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .hero,
 .information,
-.quote,
-.sign-up {
-    flex: 1;
+.quote {
+    flex: 2;
 }
 
 /* --- Hero Section  --- */
@@ -129,27 +124,28 @@ a {
     background: #8a8a8a;
     width: 300px;
     height: 200px;
+    flex-shrink: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-shrink: 1;
 }
 
 /* --- Information Section --- */
 
 .information {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     margin-bottom: 48px;
     padding: 48px 192px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 32px;
 }
 
 .information .title {
     font-size: 28px;
     font-weight: 700;
+    text-align: center;
 }
 
 .info-cards {
@@ -160,11 +156,11 @@ a {
 }
 
 .info {
+    font-size: 14px;
+    color: #5b5b5b;
     max-width: 100px;
     text-align: center;
     flex: 1;
-    font-size: 14px;
-    color: #5b5b5b;
 }
 
 .info-img {
@@ -200,19 +196,32 @@ a {
 /* --- Sign Up Section --- */
 
 .sign-up {
+    flex: 1;
+    padding: 48px 192px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-up-box {
+    flex: 1;
     background: #974EC3;
     color: #eee;
+    max-width: 800px;
     border-radius: 8px;
-    margin: 48px 192px;
     padding: 36px 64px;
-    max-height: 128px;
-    /* width: 400px; */
-    /* align-self keeps box from growing */
-    align-self: center;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 36px;
+    gap: 32px;
+}
+
+.sign-up .left {
+    min-width: 100px;
+}
+
+.sign-up p {
+    font-size: 12px;
 }
 
 .sign-up button {
@@ -221,15 +230,5 @@ a {
     border: 3px solid #FE7BE5;
     border-radius: 8px;
     padding: 6px 24px;
-    align-self: center;
-    justify-self: center;
-}
-
-.sign-up .left {
-    width: 200px;
-    flex-shrink: 0;
-}
-
-.sign-up p {
-    font-size: 12px;
+    white-space: nowrap;
 }
