@@ -52,6 +52,14 @@ footer {
     font-size: 24px;
     font-weight: 800;
     flex: 1;
+    border: 3px solid transparent;
+}
+
+.logo:hover {
+    background-color: #504099;
+    transition-duration: 0.4s;
+    border: 3px solid #504099;
+    font-size: 36px;
 }
 
 .links {
@@ -59,6 +67,19 @@ footer {
     display: flex;
     justify-content: end;
     gap: 24px;
+}
+
+.links li {
+    border: 3px solid transparent;
+    padding: 8px;
+}
+
+.links li:hover {
+    background-color: #504099;
+    color: #313866;
+    transition-duration: 0.4s;
+    border: 3px solid #313866;
+    font-weight: bold;
 }
 
 #navbar ul {
@@ -116,8 +137,17 @@ footer {
     color: #eee;
     font-weight: bold;
     margin-top: 12px;
+    border: 3px solid transparent;
     border-radius: 8px;
     padding: 8px 24px;
+}
+
+.left button:hover {
+    background-color:#FE7BE5;
+    color: #313866;
+    transition-duration: 0.4s;
+    border: 3px solid #313866;
+    font-weight: bold;
 }
 
 .img {
@@ -158,10 +188,25 @@ footer {
 .info {
     font-size: 14px;
     color: #5b5b5b;
+    border: 3px solid transparent;
     max-width: 100px;
     text-align: center;
     flex: 1;
 }
+
+.info:hover {
+    color: #313866;
+    transition-duration: 0.3s;
+    font-weight: bold;
+}
+
+.info:hover .info-img {
+    background-color:#FE7BE5;
+    color: #313866;
+    border: 3px solid #313866;
+    font-weight: bold;
+}
+
 
 .info-img {
     width: 100px;
@@ -208,6 +253,7 @@ footer {
     background: #974EC3;
     color: #eee;
     max-width: 800px;
+    border: 3px solid #FE7BE5;
     border-radius: 8px;
     padding: 36px 64px;
     display: flex;
@@ -216,8 +262,20 @@ footer {
     gap: 32px;
 }
 
+.sign-up-box:hover {
+    background-color:#504099;
+    color: #FE7BE5;
+    transition-duration: 0.4s;
+    border: 3px solid #FE7BE5;
+}
+
 .sign-up .left {
-    min-width: 100px;
+    min-width: 120px;
+    /* flex: 2; */
+}
+.sign-up .right {
+    min-width: 104px;
+    /* flex: 1; */
 }
 
 .sign-up p {
@@ -231,4 +289,13 @@ footer {
     border-radius: 8px;
     padding: 6px 24px;
     white-space: nowrap;
+    font-weight: normal;
+}
+
+.sign-up button:hover {
+    background-color:#FE7BE5;
+    color: #313866;
+    transition-duration: 0.4s;
+    border: 3px solid #313866;
+    font-weight: bold;
 }
