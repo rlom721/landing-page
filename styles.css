@@ -53,11 +53,12 @@ footer {
     font-weight: 800;
     flex: 1;
     border: 3px solid transparent;
+    transition: 0.3s ease-out;
 }
 
 .logo:hover {
     background-color: #504099;
-    transition-duration: 0.4s;
+    /* transition-duration: 0.4s; */
     border: 3px solid #504099;
     font-size: 36px;
 }
@@ -72,12 +73,12 @@ footer {
 .links li {
     border: 3px solid transparent;
     padding: 8px;
+    transition: 0.3s ease-in-out;
 }
 
 .links li:hover {
     background-color: #504099;
     color: #313866;
-    transition-duration: 0.4s;
     border: 3px solid #313866;
     font-weight: bold;
 }
@@ -206,7 +207,6 @@ footer {
     border: 3px solid #313866;
     font-weight: bold;
 }
-
 
 .info-img {
     width: 100px;
